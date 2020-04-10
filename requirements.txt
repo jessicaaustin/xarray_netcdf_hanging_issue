@@ -2,4 +2,3 @@ python=3.7
 xarray
 dask
 netCDF4
-pytest

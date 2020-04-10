@@ -1,6 +1,6 @@
 Temporary repository to reproduce the issue I'm seeing with xarray.
 
-When I load up a netcdf file with a certain structure, it will intermittently hang while saving the file. I believe it's something about the file structure, but I haven't figured out what. 
+When I load up a netcdf file with a certain structure, it will intermittently hang while saving the file. I believe it's something about the file structure, but I haven't figured out what. I've tried removing variables from the file, in turn, and it still hangs. So I don't think it's something about one variable in particular.
 
 I've seen this with the following combos:
 
@@ -27,9 +27,10 @@ conda env create -n xarray_reproduce --file requirements.txt
 conda activate xarray_reproduce
 ```
 
-Run test. Fails intermittently, but will typically happen after just a few attempts.
+Run tests
 ```
-for i in {1..50}; do echo $i; pytest -s xarray_reproduce_test.py; done
+# this script fails randomly, so try it a bunch of times until it fails
+for i in {1..10}; do echo $i; python reproduce.py; done
 ```
 
 Dump env info:
