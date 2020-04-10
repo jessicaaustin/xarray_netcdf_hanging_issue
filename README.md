@@ -2,6 +2,22 @@ Temporary repository to reproduce the issue I'm seeing with xarray.
 
 When I load up a netcdf file with a certain structure, it will intermittently hang while saving the file. I believe it's something about the file structure, but I haven't figured out what. 
 
+I've seen this with the following combos:
+
+* xarray=0.14.1
+* dask=2.9.1
+* netcdf4=1.5.3
+
+and 
+
+* xarray=0.15.1
+* dask=2.14.0
+* netcdf4=1.5.3
+
+
+---
+
+
 Steps to reproduce:
 
 Create environment:
