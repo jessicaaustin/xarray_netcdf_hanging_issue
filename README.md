@@ -2,7 +2,7 @@ Temporary repository to reproduce the issue I'm seeing with xarray.
 
 When I load up a netcdf file using this code, it will intermittently hang while saving the file.
 
-I initially thought it was something about my file structure, but I also tried the [stearns_wharf.nc example](https://data.nodc.noaa.gov/thredds/catalog/ioos/sccoos/stearns_wharf/catalog.html?dataset=ioos/sccoos/stearns_wharf/stearns_wharf-2013.nc) from NCEI netCDF templates, and it still fails.
+I can reproduce this with different netcdf files, for example the [stearns_wharf.nc example](https://data.nodc.noaa.gov/thredds/catalog/ioos/sccoos/stearns_wharf/catalog.html?dataset=ioos/sccoos/stearns_wharf/stearns_wharf-2013.nc) from NCEI netCDF templates.
 
 I've seen this with the following combos:
 

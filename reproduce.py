@@ -11,7 +11,9 @@ def reproduce_xarray_issues():
         os.mkdir('tmp')
     try:
         for i in range(50):
-            with xr.open_mfdataset(['dataset.nc'], combine='by_coords') as mfd:
+            # NOTE: if you set lock=False then this runs fine every time
+            # Setting lock=None causes it to intermittently hang
+            with xr.open_mfdataset(['dataset.nc'], combine='by_coords', lock=None) as mfd:
                 p = os.path.join('tmp', 'xarray_{}.nc'.format(uuid.uuid4().hex))
                 print(f"Writing data to {p}")
                 mfd.to_netcdf(p)
