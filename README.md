@@ -1,4 +1,4 @@
-Temporary repository to reproduce the issue I'm seeing with xarray.
+Temporary repository to reproduce the issue I'm seeing with xarray. See https://github.com/pydata/xarray/issues/3961
 
 When I load up a netcdf file using this code, it will intermittently hang while saving the file.
 
