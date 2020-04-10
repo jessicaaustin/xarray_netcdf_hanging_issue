@@ -1,3 +1,9 @@
+Temporary repository to reproduce the issue I'm seeing with xarray.
+
+When I load up a netcdf file with a certain structure, it will intermittently hang while saving the file. I believe it's something about the file structure, but I haven't figured out what. 
+
+Steps to reproduce:
+
 Create environment:
 
 ```
